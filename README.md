@@ -1,9 +1,9 @@
-#### Portifolio de testes de performance K6
+### Portifolio de testes de performance K6
 Neste fremework mostro um pouco sobre teste de estresse com K6, com configuracao de rampups, monitor no data dog, thresholds.
 E neste readme passo a passo de configuração e execução.
 ## Configurando o SSH
 
-### Ubuntu & Windows & MacOS
+#### Ubuntu & Windows & MacOS
 
 Acessar o terminal (Ctrl+Alt+T) e executar o seguinte comando:
 
