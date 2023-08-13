@@ -2,13 +2,15 @@ import * as auth_service from "../../services/auth_services/auth_service.js"
 import * as service from "../../services/register_services/new_register_service.js"
 import { sleep, check } from 'k6'
 
-export const options = {
-    stages: [
-      { duration: '10m', target: 200 }, 
-      { duration: '30m', target: 200 }, 
-      { duration: '5m', target: 0 }, 
-    ]
-};
+
+export let options = {
+    vus: 10,
+    duration: '30s',
+    thresholds:{
+        http_req_duration: ['p(95)<2000'], //95% das requisicoes devem responder em até 2s
+        http_req_failed: ['rate<0.1'] //1% das requisicoes podem ocorrer erro
+    }
+}
 
 export function setup() {
     return {
