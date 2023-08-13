@@ -1,0 +1,1 @@
+DOCKER_CONTENT_TRUST=1 docker run -d --name datadog -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -e DD_SITE="datadoghq.com" -e DD_TAGS="bu:testXPTO env:qa" -e DD_HOSTNAME="k6-instance-qa-test" -e DD_API_KEY=553rd53rd53dr35dr365r53r56dr56c -e DD_DOGSTATSD_NON_LOCAL_TRAFFIC=1 -p 8122:8122/udp datadog/agent:latest
