@@ -8,7 +8,7 @@ E neste readme passo a passo de configuração e execução.
 Acessar o terminal (Ctrl+Alt+T) e executar o seguinte comando:
 
 ```bash
-ssh-keygen -o -t rsa -C “Email Swap”
+ssh-keygen -o -t rsa -C “seu email”
 ```
 
 Após executar o comando selecionar a tecla 'Enter' para definir o local padrão e a senha (caso desejar). Com o arquivo com a SSH Key devidamente gerado sera necessário verificar a mesma para uso posterior no Gitlab, para obter a key de maneira prática utilize o comando:
